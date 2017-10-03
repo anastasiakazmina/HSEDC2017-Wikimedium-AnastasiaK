@@ -6,21 +6,20 @@ body {
   background-repeat: no-repeat;
   width: 700px;
   margin: 0 auto;
-  padding-top: 70px;
+  padding-top: 66px;
 }
 
 
 p {
   font-size: 21px;
   line-height: 26px;
-  font-family: 'PT Sans', 'Arial' sans-serif;
-}
+  }
 
 h1 {
-  color: red;
-  font-size: 30px;
-  line-height: 1.4em;
-  text-decoration: uppercase;
+  font-size: 44.5px;
+  letter-spacing:.45px;
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 
 h1, h2, h3, p, ul, ol, blockquote {

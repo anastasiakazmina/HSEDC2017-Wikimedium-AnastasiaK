@@ -1,0 +1,13 @@
+body {
+  font-family: 'Cormorant Garamond', sans-serif;
+  background-image: url(..images/Ural-3313.jpeg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-top: 66px;
+}
+
+blockquote {
+  position: relative;
+  margin-top: 29px ;
+  font-style: italic;
+}

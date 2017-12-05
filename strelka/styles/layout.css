@@ -1,0 +1,141 @@
+/*margin 0 auto - это выровнить элемент по центру*/
+/*rgb - просто 3 цвета*/
+/*rgba - 4 цвета и последний меняет прозрачность!*/
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  /*background-image: url(../images/dc-online-media-mockup.jpg);*/
+  /*сглаживание шрифтов*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*наследование цвета от родителя (body), по умолчанию черный цвет*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.Intro {
+ height: 90vh;
+ background-image:url(../images/istock-582282270-2.jpg);
+ background-size: cover;
+ background-position: center;
+ padding-top: 20px;
+/*ОЧЕНЬ ВАЖНО (ВЫРАВНИВАНИЕ ДИСПЛЕЙ У РОДИТЕЛЯ И МАРДЖИН У ДОЧЕРНЕГО ЭЛЕМЕНТА)*/
+ display: flex;
+ position: relative;
+}
+
+.Intro-title {
+    font-size: 110px;
+    line-height: 125px;
+    color: #fff;
+    text-transform: uppercase;
+/*ДОЧЕРНИЙ ЭЛЕМЕНТ (ВЫРАВНИВАНИЕ)*/
+    margin: auto;
+}
+
+.Intro-linkRow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 27px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.Intro-link {
+    background: #006AFF;
+    padding: 4px 7px 2px;
+    transition: color .3s ease;
+    background: .2s ease;
+}
+
+.Intro-link:hover {
+    color: #006AFF;
+    background: #fff;
+}
+
+.Header {
+ position: absolute;
+ width: calc(100% - 240px);
+ height: 40px;
+ left: 50%;
+ transform: translateX(-50%);
+ background: #006AFF;
+ padding: 12px 16px 14px;
+ top: 20px;
+}
+
+.Header-nav {
+    display: flex;
+}
+
+.Header-navLink {
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 28px;
+
+}
+
+.Header-navLink:last-child {
+    margin-right: 0;
+}
+
+.Header-lang {
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.Feature {
+    height: 640px;
+    display: flex;
+}
+.Feature-block {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+.isProgramme .Feature-link {
+    background: #fff;
+    color: #f00;
+}
+
+.isProgramme {
+    background-image: url(../images/mg-0780.jpg);
+}
+
+.isResearch {
+    background-image: url(../images/mg-9592.jpg);
+}
+
+.Feature-link {
+    font-size: 43px;
+    line-height: 46px;
+    padding: 46px 36px 53px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

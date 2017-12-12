@@ -2,57 +2,122 @@
 /*rgb - просто 3 цвета*/
 /*rgba - 4 цвета и последний меняет прозрачность!*/
 
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption');
+
 body {
-  font-family: 'PT Sans', sans-serif;
   /*background-image: url(../images/dc-online-media-mockup.jpg);*/
   background-size: 800px 20624px;
   background-position: top center;
   background-repeat: no-repeat;
+  /*width: 700px;
+  margin: 0 auto;*/
+  font-family: 'PT Sans', sans-serif;
+  line-height: 25px;
   padding-top: 66px;
-  /*сглаживание шрифтов*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*наследование цвета от родителя (body), по умолчанию черный цвет*/
-a {
-  color: inherit;
+a, a:visited {
+    color: inherit;
+  }
+
+.sidebar {
+   position: fixed;
+   top: 46px;
+   left: 20px;
+   width: 300px;
+   opacity: .1;
+   transition: opacity .2s ease;
 }
 
-img {
-  display: block;
-  width: 1020px;
-  margin: 80px auto;
+.sidebar:hover {
+    opacity: 1;
+    /*background: red;*/
 }
 
-h1, h2, h3, p, ul, ol, blockquote {
-  font-family: 'PT Sans Caption' sans-serif;
+
+
+.sidebar > ul > li:first-child {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.sidebar > ul > li:hover {
+    color: (0,0,0, 1);
+}
+
+.sidebar li {
+    margin: 12px 0;
+    font-style: 14px;
+    line-height: 15px;
+    color: rgba (0,0,0,.8);
+}
+
+.sidebar > ul {
+    padding: 15px 30px;
+}
+
+.sidebar > ul > li > ul {
+    padding-left: 10px;
+}
+
+.sidebar > ul > li > ul {
+    color: rgba (0,0,0,.4);
+}
+
+.sidebar > ul > li > ul li:hover {
+    color: rgba (0,0,0,.6)
+};
+
+
+article > ul {
+    margin: 29px;
+    list-style: none;
+}
+
+
+article {
   width: 700px;
   margin: 0 auto;
 }
 
+ article img {
+  display: block;
+  width: 1020px;
+  margin: 80px 0 80px -160px;
+  /*поделили пополам 320 (1020-700px, из общего размера артикла)*/
+}
+
 h1, h2, h3 {
+  font-family: 'PT Sans Caption', sans-serif;
   font-weight: bold;
 }
 
-
 h1 {
-  font-family: 'PT Sans Caption';
   font-size: 40px;
   line-height: 46px;
-  font-weight: bold;
 }
 
 h1 + p {
-  color: rgba(0, 0, 0, .4);
   font-family: 'PT Sans Caption', sans-serif;
+  color: rgba(0, 0, 0, .4);
   font-size: 22px;
   line-height: 32px;
 }
 
+p, blockquote, article ul {
+  font-size: 22px;
+  line-height: 34px;
+}
+
+p + p, blockquote + p {
+  margin-top: 29px;
+}
+
 h2 {
   margin-top: 43px;
-  font-size:32px;
+  font-size: 32px;
   line-height: 36px;
 }
 
@@ -70,20 +135,33 @@ h3 + p {
   margin-top: 6px;
 }
 
-p, blockquote, ul {
-  font-size: 22px;
-  line-height: 34px;
+img + h2 {
+  margin-top: -1px;
 }
 
-p + p, blockquote + p {
-margin-top: 29px;
+img + p {
+  margin-top: -3px;
 }
+
+ article ul, ol {
+ font-size: 22px;
+ margin: 29px auto;
+ list-style-type: disc;
+}
+
+li {
+  margin-top: 20px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+  }
 
 blockquote {
   position: relative;
-  margin-top: 29px ;
+  margin-top: 29px;
   font-style: italic;
-
 }
 
 blockquote::before {
@@ -94,15 +172,9 @@ blockquote::before {
   left: -20px;
   width: 3px;
   height: 100%;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0, 0, 0, .8)
 }
 
-
-ul {
- margin: 29px auto;
- list-style-type: disc;
-}
-
-li {
- margin: 17px 0 17px 30px;
+.grey {
+  color: rgba(0, 0, 0, .4);
 }

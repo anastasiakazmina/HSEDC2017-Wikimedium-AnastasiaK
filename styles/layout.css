@@ -5,22 +5,60 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption');
 
 body {
+    font-family: 'PT Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   /*background-image: url(../images/dc-online-media-mockup.jpg);*/
-  background-size: 800px 20624px;
-  background-position: top center;
-  background-repeat: no-repeat;
+  /*background-size: 800px 20624px;*/
+  /*background-position: top center;
+  background-repeat: no-repeat;*/
   /*width: 700px;
   margin: 0 auto;*/
-  font-family: 'PT Sans', sans-serif;
-  line-height: 25px;
-  padding-top: 66px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /*line-height: 25px;*/
+  /*padding-top: 66px;*/
+
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a, a:visited {
     color: inherit;
   }
+
+ .menubar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 50px;
+  padding: 20px;
+ }
+
+ .logo {
+     display: block;
+     width: 180px;
+     height: 16px;
+     background-image: url(../images/wikimedium_logo.svg);
+ }
+
+.about {
+    font-size: 14px;
+    line-height: 50px;
+    color: rgba(0,0,0,.2);
+    -webkit-transition: color .1s ease;
+    transition: color .1s ease;
+}
+
+.about:hover {
+    color: rgba(0,0,0,.4);
+}
 
 .sidebar {
    position: fixed;
@@ -28,6 +66,7 @@ a, a:visited {
    left: 20px;
    width: 300px;
    opacity: .1;
+   -webkit-transition: opacity .2s ease;
    transition: opacity .2s ease;
 }
 
@@ -51,7 +90,7 @@ a, a:visited {
     margin: 12px 0;
     font-style: 14px;
     line-height: 15px;
-    color: rgba (0,0,0,.8);
+    color: rgba(0,0,0,.8);
 }
 
 .sidebar > ul {
@@ -63,7 +102,7 @@ a, a:visited {
 }
 
 .sidebar > ul > li > ul {
-    color: rgba (0,0,0,.4);
+    color: rgba(0,0,0,.4);
 }
 
 .sidebar > ul > li > ul li:hover {
@@ -86,7 +125,7 @@ article {
   display: block;
   width: 1020px;
   margin: 80px 0 80px -160px;
-  /*поделили пополам 320 (1020-700px, из общего размера артикла)*/
+  /*поделили пополам 320 (1020-700px, из общего размера артикля)*/
 }
 
 h1, h2, h3 {
